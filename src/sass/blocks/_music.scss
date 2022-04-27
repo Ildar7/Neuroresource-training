@@ -1,0 +1,72 @@
+.music {
+
+    &__container {
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        min-height: 500px;
+        @media (max-width: 575px) {
+           min-height: 300px;
+        }
+        &.active {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    &__block {
+    }
+
+    &__timer {
+        font-size: 18px;
+        line-height: 120%;
+        color: $whitecolor;
+        margin: 100px 0 105px;
+        width: 183px;
+        height: 183px;
+        border: 3.5px solid $lightcolor;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @media (max-width: 575px) {
+           margin: 50px 0 55px;
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        &-round {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 3.5px solid  $lightcolor;
+            position: absolute;
+            transform: translateY(-77px);
+            &.active {
+                animation: myOrbit 60s linear infinite;
+            }
+        }
+    }
+
+    &__btn {
+    }
+}

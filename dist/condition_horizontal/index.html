@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>нейроресурс | состояние</title>
+    <link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <script src="https://kit.fontawesome.com/7d0ca4e7f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+    <div class="header__container container">
+        <div class="header__menu">
+            <a href="/" class="header__logo"><img src="/img/logo.svg" alt="logo"></a>
+            <div class="header__info">
+                <a href="#" class="header__sign button">Войти</a>
+                <div class="hamb">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="wrapper">
+
+        <section class="page-section">
+            <div class="condition-horizontal condition">
+                <div class="condition__container container">
+                    <div class="condition__content">
+                        <div class="condition__name title-section">Отметьте свое состояние</div>
+                        <p class="condition__descr description">
+                            <span>Оцените по шкале, насколько вы сейчас соответствуете этим
+                                качествам. </span>
+                            <span>Значение 0 - не соответствую совсем, значение +100 - соответствую полностью.</span>
+                            <span>Затем нажмите на кнопку ниже</span>
+                        </p>
+                        <div class="condition-horizontal__block">
+                            <form class="condition-horizontal__form">
+                                <div class="condition-horizontal__item">
+                                    <span class="condition-horizontal__span">Откровенный(ая)</span>
+                                    <div class="condition__tooltip condition-horizontal__tooltip"
+                                        id="condition-horizontal__tooltip_1">
+                                        <div class="condition-horizontal__arrows">
+                                            <div class="condition-horizontal__arrow condition-horizontal__arrow-left">
+                                                <svg class="condition-horizontal__answer-icon" width="8" height="15"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-left"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="condition-horizontal__arrow condition-horizontal__arrow-right">
+                                                <svg class="condition-horizontal__answer-icon" width="8" height="15"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-horizontal__item">
+                                    <span class="condition-horizontal__span">Женственная</span>
+                                    <div class="condition__tooltip condition-horizontal__tooltip"
+                                        id="condition-horizontal__tooltip_2">
+                                        <div class="condition-horizontal__arrows">
+                                            <div class="condition-horizontal__arrow condition-horizontal__arrow-left">
+                                                <svg class="condition-horizontal__answer-icon" width="8" height="15"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-left"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="condition-horizontal__arrow condition-horizontal__arrow-right">
+                                                <svg class="condition-horizontal__answer-icon" width="8" height="15"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="condition-horizontal__item">
+                                    <span class="condition-horizontal__span">Здравомыслящий(ая)</span>
+                                    <div class="condition__tooltip condition-horizontal__tooltip"
+                                        id="condition-horizontal__tooltip_3">
+                                        <div class="condition-horizontal__arrows">
+                                            <div class="condition-horizontal__arrow condition-horizontal__arrow-left">
+                                                <svg class="condition-horizontal__answer-icon" width="8" height="15"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-left"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="condition-horizontal__arrow condition-horizontal__arrow-right">
+                                                <svg class="condition-horizontal__answer-icon" width="8" height="15"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="condition__answer">
+                                <svg class="condition__answer-icon" width="12" height="18" aria-hidden="true">
+                                    <use xlink:href="/img/sprite.svg#question-logo"></use>
+                                </svg>
+                                <div class="condition__answer-block">
+                                    <a href="#" class="condition__answer-link orange">Не знаю как определить свое
+                                        состояние на шкале ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="start">
+            <div class="start__container container">
+                <div class="start__content">
+                    <a href="/qualities/" class="start__link">
+                        <span>Начать</span>
+                    </a>
+                    <a href="/" class="start__back orange">
+                        < Вернуться на страницу с продуктами</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+
+</footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/js/script.min.js"></script>
+    <script>
+        function initTooltipHorizontal(item) {
+            var tooltipSliderHorizontal = document.getElementById(item);
+
+            noUiSlider.create(tooltipSliderHorizontal, {
+                start: 0,
+                tooltips: true,
+                step: 1,
+                range: {
+                    'min': 0,
+                    'max': 100
+                }
+            });
+        }
+
+        initTooltipHorizontal('condition-horizontal__tooltip_1');
+        initTooltipHorizontal('condition-horizontal__tooltip_2');
+        initTooltipHorizontal('condition-horizontal__tooltip_3');
+    </script>
+</body>
+
+</html>

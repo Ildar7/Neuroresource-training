@@ -1,0 +1,18 @@
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateY(-77px) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateY(-77px) rotate(360deg); }
+}
+
+@keyframes stopAnimate {
+    0%  { transform: translate(2px, 1px) rotate(0deg) scale(1); }
+    10% { transform: translate(-1px, -2px) rotate(-2deg) scale(1.05); }
+    20% { transform: translate(-3px, 0px) rotate(3deg) scale(1.05); }
+    30% { transform: translate(0px, 2px) rotate(0deg) scale(1.1); }
+    40% { transform: translate(1px, -1px) rotate(1deg) scale(1.15); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg) scale(1.2); }
+    60% { transform: translate(-3px, 1px) rotate(0deg) scale(1.25); }
+    70% { transform: translate(2px, 1px) rotate(-2deg) scale(1.3); }
+    80% { transform: translate(-1px, -1px) rotate(4deg) scale(1.35); }
+    90% { transform: translate(2px, 2px) rotate(0deg) scale(1.4); }
+    100%{ transform: translate(1px, -2px) rotate(-1deg) scale(1); }
+}

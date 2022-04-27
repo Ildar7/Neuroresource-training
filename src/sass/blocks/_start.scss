@@ -1,0 +1,257 @@
+
+.main-start {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    @media (max-width: 991px) {
+       margin-bottom: 30px;
+    }
+    @media (max-width: 767px) {
+       position: relative;
+       top: 0;
+       margin-top: 50px;
+       margin-bottom: 50px;
+    }
+    @media (max-width: 575px) {
+       margin-top: -10px;
+    }
+    &__container {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @media (max-width: 991px) {
+           flex-direction: column;
+        }
+    }
+    .start {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translateX(0);
+        @media (max-width: 991px) {
+           order: 0;
+        }
+        @media (max-width: 575px) {
+           width: 300px;
+           height: 300px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+    }
+    .stop {
+        position: absolute;
+        left: 0;
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
+        &:before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: transparent;
+           z-index: 2;
+        }
+        &.active {
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+            &:before {
+               width: 0;
+               height: 0;
+            }
+        }
+        &.animated {
+            animation: stopAnimate 1.5s ease-in-out;
+        }
+        @media (max-width: 1200px) {
+           left: 50px;
+        }
+        @media (max-width: 991px) {
+           position: relative;
+           left: 0;
+           order: 1;
+           margin-top: 30px;
+        }
+        @media (max-width: 575px) {
+           margin-top: 0;
+        }
+    }
+}
+.start {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &__container {
+    }
+
+    &__answer {
+        background: #232528;
+        border-radius: 12px;
+        padding: 24px 32px;
+        color: $desertcolor;
+        font-size: 16px;
+        line-height: 160%;
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        min-width: 320px;
+        left: -50px;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition: all 0.2s ease-in-out;
+        @media (max-width: 575px) {
+            top: 30px;
+           left: -10px;
+        }
+    }
+
+    &-index {
+        position: relative;
+        &.disabled {
+            &:hover {
+                .start__answer {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+        .start__link {
+            opacity: 0.35;
+            transition: all 0.2s ease-in-out;
+        }
+        &:before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           z-index: 1;
+           background: transparent;
+           transition: all 0.2s ease-in-out;
+        }
+        &.active {
+            .start__link {
+                opacity: 1;
+                transition: all 0.2s ease-in-out;
+            }
+            &:before {
+               width: 0;
+               height: 0;
+               transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link {
+        width: 220px;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 120%;
+        color: $whitecolor;
+        position: relative;
+        background: url('../img/button_shape.svg') center (center / cover) no-repeat;
+        transition: all 0.2s ease-in-out;
+        @media (max-width: 575px) {
+           width: 200px;
+           height: 200px;
+        }
+        span {
+            user-select: none;
+        }
+        & > span {
+            width: 165px;
+            height: 165px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50%;
+            border: 8px solid $lightcolor;
+            @media (max-width: 575px) {
+                width: 152px;
+                height: 152px;
+               border: 6px solid $lightcolor;
+            }
+        }
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            &:after {
+                filter: blur(3px);
+                transition: all 0.2s ease-in-out;
+            }
+            &:before {
+                filter: blur(9px);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        &:after {
+           content: '';
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           width: 161px;
+           height: 161px;
+           border: 7px solid $lightcolor;
+           filter: blur(6px);
+           border-radius: 50%;
+           transition: all 0.2s ease-in-out;
+           @media (max-width: 575px) {
+               width: 150px;
+               height: 150px;
+              border: 3px solid $lightcolor;
+           }
+        }
+        &:before {
+           content: '';
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           width: 180px;
+           height: 180px;
+           border: 10px solid $lightcolor;
+           border-radius: 50%;
+           filter: blur(12px);
+           transition: all 0.2s ease-in-out;
+           @media (max-width: 575px) {
+               width: 170px;
+               height: 170px;
+              border: 6px solid $lightcolor;
+           }
+        }
+    }
+
+    &__back {
+        margin-top: 32px;
+        font-size: 20px;
+        line-height: 20px;
+        @media (max-width: 575px) {
+           font-size: 18px !important;
+           line-height: 18px;
+        }
+    }
+}

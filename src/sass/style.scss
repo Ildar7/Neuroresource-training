@@ -1,0 +1,23 @@
+@import "libs/bootstrap-reboot.min";
+
+@import "base/mixins";
+@import "base/vars";
+@import "libs/jquery-ui";
+@import "base/animation";
+@import "base/fonts";
+@import "base/static";
+
+@import "blocks/popup";
+@import "blocks/header";
+@import "blocks/crumbs";
+@import "blocks/productivity";
+@import "blocks/animation";
+@import "blocks/start";
+@import "blocks/qualities";
+@import "blocks/condition";
+@import "blocks/condition-horizontal";
+@import "blocks/condition-vertical";
+@import "blocks/video";
+@import "blocks/music";
+@import "blocks/results";
+@import "blocks/footer";

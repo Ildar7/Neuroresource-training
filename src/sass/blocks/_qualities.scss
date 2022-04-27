@@ -1,0 +1,117 @@
+.qualities {
+
+    &__container {
+    }
+
+    &__about {
+    }
+
+    &__title {
+    }
+
+    &__descr {
+        margin-top: 64px;
+    }
+
+    &__content {
+        margin-top: 84px;
+    }
+
+    &__form {
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc(25% - 22.5px);
+        min-height: 112px;
+        margin-right: 30px;
+        border-radius: 12px;
+        position: relative;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+        &-input {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            &:checked+.qualities__item-label {
+                border-image-slice: 10; /* border-radius*2 */
+                border-image-width: 10px; /* border-radius*2 */
+                border-image-source: url('../img/border-active.svg');
+            }
+            &:checked+.qualities__item-label svg {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+        }
+        &-label {
+            border: 1px solid rgba(219, 226, 228, 0.1);
+            border-radius: 12px;
+            padding: 22px;
+            cursor: pointer;
+        }
+        &-info {
+            position: absolute;
+            top: 16px;
+            left: 0;
+            padding: 0 16px;
+            width: 100%;
+            font-size: 12px;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2;
+        }
+        &-block {
+            position: relative;
+            width: 100%;
+            display: inline-block;
+        }
+
+        &-img {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            &:before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgba(0,0,0,.45);
+               z-index: 1;
+            }
+        }
+
+        &-text {
+        }
+
+        &-checkbox {
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $lightcolor;
+            padding: 3px;
+            svg {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__checked {
+        font-size: 18px;
+        line-height: 120%;
+        margin-top: 64px;
+        margin-bottom: 42px;
+    }
+}

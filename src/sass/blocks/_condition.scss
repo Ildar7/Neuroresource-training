@@ -1,0 +1,103 @@
+.condition {
+    text-align: center;
+    &__container {
+    }
+
+    &__content {
+        
+    }
+
+    &__name {
+        
+    }
+
+    &__descr {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    &__tooltip {
+        
+        border: none;
+        box-shadow: none;
+        position: relative;
+        &:before {
+           position: absolute;
+           color: $greycolor;
+        }
+        &:after {
+           position: absolute;
+           color: $greycolor;
+        }
+        .noUi-handle {
+            width: 7px;
+            height: 7px;
+            border: none;
+            border-radius: 50%;
+            box-shadow: none;
+            &:after, &:before {
+               display: none;
+            }
+        }
+        .noUi-tooltip {
+            background: none;
+            border: none;
+            color: $lightcolor;
+            padding: 0;
+            font-size: 16px;
+            line-height: 19px;
+            bottom: auto;
+        }
+    }
+
+    &__btn {
+        margin: 32px 0;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 110px;
+    }
+
+    &__answer {
+        margin-top: 80px;
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.80538px solid $greycolor;
+        border-radius: 13.6364px;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        .answer-text {
+            top: -90px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        &:hover {
+           transition: all 0.2s ease-in-out;
+           .answer-popup {
+               opacity: 1;
+               visibility: visible;
+               transition: all 0.05s ease-in-out;
+           }
+        }
+        &-icon {
+
+        }
+        &-block {
+            position: absolute;
+            padding-bottom: 40px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.05s ease-in-out;
+            
+        }
+    }
+}

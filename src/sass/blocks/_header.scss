@@ -1,0 +1,35 @@
+.header {
+    padding-top: 42px;
+    &__container {
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sign {
+        margin-right: 115px;
+        background: $lightcolor;
+        color: $darkcolor;
+        transition: all 0.2s ease-in-out;
+        @media (max-width: 575px) {
+           margin-right: 30px;
+           padding: 12px 24px;
+        }
+        &:hover {
+           transition: all 0.2s ease-in-out;
+           opacity: 0.6;
+           color: $darkcolor;
+        }
+    }
+}

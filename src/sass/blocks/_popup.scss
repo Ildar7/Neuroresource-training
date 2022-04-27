@@ -1,0 +1,193 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    background: rgba(0,0,0,.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    transition: all 0.2s ease-in-out;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        background: rgba(0,0,0,.7);
+        transition: all 0.2s ease-in-out;
+        .popup__body {
+            position: relative;
+            top: auto;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+    &__body {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100%;
+        opacity: 0;
+        visibility: hidden;
+        overflow-y: auto;
+        padding: 50px 0;
+        transition: all 0.2s ease-in-out;
+        &-video {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-text {
+            padding: 40px;
+            background: #e6e6e6;
+            border-radius: 12px;
+            max-width: 632px;
+            color: $darkcolor;
+            @media (max-width: 575px) {
+               padding: 25px;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        @media (max-width: 767px) {
+           right: 25px;
+           top: 25px;
+        }
+        &:hover {
+           transition: all 0.2s ease-in-out;
+           opacity: 0.5;
+        }
+        &-text {
+            right: 15px;
+            top: 15px;
+        }
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        opacity: 0;
+        cursor: pointer;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 0.2s ease-in-out;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+            transition: all 0.2s ease-in-out;
+        }
+        svg {
+            transition: all 0.2s ease-in-out;
+            @media (max-width: 575px) {
+               width: 75px;
+            }
+        }
+        &:hover {
+           transition: all 0.2s ease-in-out;
+           svg {
+               width: 105px;
+               transition: all 0.2s ease-in-out;
+           }
+        }
+    }
+
+    &__icon {
+    }
+
+    &__video {
+        width: 100%;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        &.active {
+            &:before {
+               opacity: 0;
+               visibility: hidden;
+               background: transparent;
+               transition: all 0.2s ease-in-out;
+            }
+        }
+        &:before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           border-radius: 12px;
+           background: rgba(0,0,0,.4);
+           transition: all 0.2s ease-in-out;
+        }
+        video {
+            width: 100%;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        @media (max-width: 575px) {
+           padding-right: 30px;
+        }
+        span {
+            color: $desertcolor;
+            opacity: 0.7;
+            font-weight: 700;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 575px) {
+           margin-top: 20px;
+        }
+        p {
+            margin-bottom: 5px;
+            @media (max-width: 575px) {
+               margin-bottom: 5px;
+            }
+        }
+        ul {
+            margin-bottom: 5px;
+            @media (max-width: 575px) {
+               margin-bottom: 5px;
+            }
+            li {
+                list-style-type: disc;
+                margin-left: 30px;
+                margin-bottom: 5px;
+                @media (max-width: 575px) {
+                   margin-left: 25px;
+                }
+            }
+        }
+    }
+}

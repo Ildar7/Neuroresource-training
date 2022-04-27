@@ -1,0 +1,49 @@
+.animation {
+    
+    margin-top: -80px;
+    @media (max-width: 991px) {
+       margin-top: -60px;
+    }
+    @media (max-width: 575px) {
+       margin-top: -20px;
+    }
+    &__container {
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__block {
+        position: relative;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__img {
+        @media (max-width: 991px) {
+           width: 550px;
+        }
+        @media (max-width: 575px) {
+           width: auto;
+        }
+        img {
+            @media (max-width: 991px) {
+               max-width: 100%;
+               width: 100%;
+            }
+        }
+    }
+}
