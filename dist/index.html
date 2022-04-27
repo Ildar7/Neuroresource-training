@@ -67,14 +67,16 @@
                             <form class="productivity__form">
                                 <div class="productivity__form-title">Выбрать пол</div>
                                 <div class="productivity__input">
-                                    <input type="radio" name="productivityRadio" id="productivityMan">
+                                    <input type="radio" name="productivityRadio" id="productivityMan"
+                                        data-gender="male">
                                     <label for="productivityMan">
                                         <span class="productivity__radio"></span>
                                         <span>Мужской</span>
                                     </label>
                                 </div>
                                 <div class="productivity__input">
-                                    <input type="radio" name="productivityRadio" id="productivityWoman">
+                                    <input type="radio" name="productivityRadio" id="productivityWoman"
+                                        data-gender="female">
                                     <label for="productivityWoman">
                                         <span class="productivity__radio"></span>
                                         <span>Женский</span>
@@ -89,7 +91,8 @@
                                     пресыщения от поступающей информации наступает усталость и апатия.
                                     Медитация "Энергичность" включает в процесс и раскрывает ресурсы для ментальной
                                     подзарядки. Вы ощутите прилив сил и приступите к делам с новым уровнем энергии.</p>
-                                <div class="productivity__addition">Действует до 2 часов. Эффект может быть остановлен
+                                <div class="productivity__addition">Действует 2 часа. При желании, эффект может быть
+                                    остановлен
                                     нажатием кнопки «Остановить действие тренажера»</div>
                             </div>
                         </div>
@@ -100,7 +103,7 @@
         <div class="main-start">
             <div class="main-start__container container">
                 <div class="stop">
-                    <a href="#" class="stop__link button">Остановить действие тренажера</a>
+                    <a href="#" class="stop__link button">Остановить действие тренажера LTV 03</a>
                 </div>
                 <div class="start start-index disabled mt-100">
                     <div class="start__answer answer-popup ">
@@ -190,7 +193,7 @@
                             ощущений. Именно с ней идет работа тренажера.</p>
                         <p>1. Определите свое состояние до запуска:</p>
                         <ul>
-                            <li>Зафиксируйте взгляд перед собой</li>
+                            <li>Встаньте, зафиксируйте взгляд перед собой</li>
                             <li>Переведите внимание в область груди</li>
                             <li>Определите по внутренней интуитивной шкале ваше состояние: где -10 максимальный
                                 негатив или отсутствие качества, или состояния, +10 полный позитив или их максимальное
@@ -231,6 +234,16 @@
             document.getElementById('popup-text-1').classList.remove('open');
             document.querySelector('body').classList.remove('lock');
         });
+        let productivityRadio = document.querySelectorAll('input[name=productivityRadio]')
+        productivityRadio.forEach((elem) => {
+            elem.addEventListener('click', () => {
+                if (elem.getAttribute('data-gender') == 'male') {
+                    localStorage.setItem('getGender', JSON.stringify(elem.getAttribute('data-gender')));
+                } else {
+                    localStorage.setItem('getGender', JSON.stringify(elem.getAttribute('data-gender')));
+                }
+            })
+        })
     </script>
 </body>
 

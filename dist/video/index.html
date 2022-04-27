@@ -82,7 +82,7 @@
 
         function timer() {
             count = count - 1;
-            if (count <= 0) {
+            if (count == 0) {
                 document.getElementById('timer').innerHTML = count;
                 clearInterval(counter);
                 window.location.href = '/condition_vertical_results/';
@@ -115,15 +115,6 @@
                 var audio = new Audio();
                 audio.src = musicLink;
                 audio.play();
-                audio.addEventListener('loadedmetadata', function () {
-                    let time = 0;
-                    setInterval(() => {
-                        time++;
-                        if (parseInt(audio.duration) == time) {
-                            window.location.href = '/condition_vertical_results/'
-                        }
-                    }, 1000)
-                });
                 let videoContent = document.querySelector('.video__content');
                 let musicContent = document.querySelector('.music__content');
                 videoElem.addEventListener('ended', () => {
@@ -138,15 +129,6 @@
             var audio = new Audio();
             audio.src = musicLink;
             audio.play();
-            audio.addEventListener('loadedmetadata', function () {
-                let time = 0;
-                setInterval(() => {
-                    time++;
-                    if (parseInt(audio.duration) == time) {
-                        window.location.href = '/condition_vertical_results/'
-                    }
-                }, 1000)
-            });
             let videoElem = document.querySelector('.video__img > video');
             let videoContent = document.querySelector('.video__content');
             let musicContent = document.querySelector('.music__content');

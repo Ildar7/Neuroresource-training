@@ -22,6 +22,7 @@ body {
     background: linear-gradient(51.34deg, #141414 28.46%, #2C3846 95.67%);
     color: $lightcolor;
     min-height: 100vh;
+    user-select: none;
 }
 
 body.lock {

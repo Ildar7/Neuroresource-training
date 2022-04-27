@@ -62,7 +62,7 @@
             position: absolute;
             transform: translateY(-77px);
             &.active {
-                animation: myOrbit 60s linear infinite;
+                animation: myOrbit 60s linear;
             }
         }
     }

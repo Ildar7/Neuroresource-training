@@ -82,13 +82,13 @@
                                         </div>
 
                                     </div>
-                                    <div class="start start-index">
+                                    <div class="start start-index" id="startBtn">
                                         <div class="start__container container">
                                             <div class="start__content">
                                                 <a href="/video/" class="start__link" id="conditionStartLink_2">
                                                     <span>
                                                         <span>Начать</span>
-                                                        <span>LTV</span>
+                                                        <span>LTV 03</span>
                                                     </span>
                                                 </a>
                                                 <a href="/" class="start__back orange">
@@ -134,7 +134,7 @@
                             ощущений. Именно с ней идет работа тренажера.</p>
                         <p>1. Определите свое состояние до запуска:</p>
                         <ul>
-                            <li>Зафиксируйте взгляд перед собой</li>
+                            <li>Встаньте, зафиксируйте взгляд перед собой</li>
                             <li>Переведите внимание в область груди</li>
                             <li>Определите по внутренней интуитивной шкале ваше состояние: где -10 максимальный
                                 негатив или отсутствие качества, или состояния, +10 полный позитив или их максимальное
@@ -178,7 +178,10 @@
             document.getElementById('popup-text-2').classList.remove('open');
             document.querySelector('body').classList.remove('lock');
         });
+
+
         $(function () {
+
             $("#condition-vertical__tooltip_1").slider({
                 orientation: "vertical",
                 range: "min",
@@ -187,6 +190,7 @@
                 value: 0,
                 change: function (event, ui) {
                     $('.ui-block-answer').css('bottom', $('.ui-slider-handle').css('bottom'));
+                    $('.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min').css('height', '100%');
                 },
                 start: function (event, ui) {
                     $(".ui-block-link").removeClass("active");
@@ -230,7 +234,10 @@
                 $(".ui-block-link").removeClass("active");
                 $(".start").removeClass("active");
             });
+            $('.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min').css('height', '100%')
         });
+
+
 
         window.addEventListener('load', () => {
             let beforeItem = document.querySelector('.ui-value');

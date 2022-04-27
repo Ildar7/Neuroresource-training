@@ -748,6 +748,7 @@ button.ui-button::-moz-focus-inner {
         left: -40px;
         min-width: 30px;
         text-align: right;
+        user-select: none;
     }
 }
 .ui-slider .ui-slider-range {

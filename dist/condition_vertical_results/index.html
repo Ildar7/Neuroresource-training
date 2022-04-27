@@ -132,7 +132,7 @@
                             ощущений. Именно с ней идет работа тренажера.</p>
                         <p>1. Определите свое состояние до запуска:</p>
                         <ul>
-                            <li>Зафиксируйте взгляд перед собой</li>
+                            <li>Встаньте, зафиксируйте взгляд перед собой</li>
                             <li>Переведите внимание в область груди</li>
                             <li>Определите по внутренней интуитивной шкале ваше состояние: где -10 максимальный
                                 негатив или отсутствие качества, или состояния, +10 полный позитив или их максимальное
@@ -185,6 +185,7 @@
                 value: 0,
                 change: function (event, ui) {
                     $('.ui-block-answer').css('bottom', $('.ui-slider-handle').css('bottom'));
+                    $('.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min').css('height', '100%');
                 },
                 start: function (event, ui) {
                     $(".ui-block-link").removeClass("active");
@@ -228,6 +229,7 @@
                 $(".ui-block-link").removeClass("active");
                 $(".start").removeClass("active");
             });
+            $('.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min').css('height', '100%')
         });
         window.addEventListener('load', () => {
             let afterItem = document.querySelector('.ui-value');

@@ -1183,6 +1183,10 @@ button.ui-button::-moz-focus-inner {
   left: -40px;
   min-width: 30px;
   text-align: right;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .ui-slider .ui-slider-range {
@@ -2322,38 +2326,38 @@ a.ui-button:focus {
   }
 
   30% {
-    -webkit-transform: translate(0px, 2px) rotate(0deg) scale(1.1);
-            transform: translate(0px, 2px) rotate(0deg) scale(1.1);
+    -webkit-transform: translate(0px, 2px) rotate(0deg) scale(1.06);
+            transform: translate(0px, 2px) rotate(0deg) scale(1.06);
   }
 
   40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg) scale(1.15);
-            transform: translate(1px, -1px) rotate(1deg) scale(1.15);
+    -webkit-transform: translate(1px, -1px) rotate(1deg) scale(1.07);
+            transform: translate(1px, -1px) rotate(1deg) scale(1.07);
   }
 
   50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg) scale(1.2);
-            transform: translate(-1px, 2px) rotate(-1deg) scale(1.2);
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
+            transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
   }
 
   60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg) scale(1.25);
-            transform: translate(-3px, 1px) rotate(0deg) scale(1.25);
+    -webkit-transform: translate(-3px, 1px) rotate(0deg) scale(1.12);
+            transform: translate(-3px, 1px) rotate(0deg) scale(1.12);
   }
 
   70% {
-    -webkit-transform: translate(2px, 1px) rotate(-2deg) scale(1.3);
-            transform: translate(2px, 1px) rotate(-2deg) scale(1.3);
+    -webkit-transform: translate(2px, 1px) rotate(-2deg) scale(1.15);
+            transform: translate(2px, 1px) rotate(-2deg) scale(1.15);
   }
 
   80% {
-    -webkit-transform: translate(-1px, -1px) rotate(4deg) scale(1.35);
-            transform: translate(-1px, -1px) rotate(4deg) scale(1.35);
+    -webkit-transform: translate(-1px, -1px) rotate(4deg) scale(1.17);
+            transform: translate(-1px, -1px) rotate(4deg) scale(1.17);
   }
 
   90% {
-    -webkit-transform: translate(2px, 2px) rotate(0deg) scale(1.4);
-            transform: translate(2px, 2px) rotate(0deg) scale(1.4);
+    -webkit-transform: translate(2px, 2px) rotate(0deg) scale(1.2);
+            transform: translate(2px, 2px) rotate(0deg) scale(1.2);
   }
 
   100% {
@@ -2379,38 +2383,38 @@ a.ui-button:focus {
   }
 
   30% {
-    -webkit-transform: translate(0px, 2px) rotate(0deg) scale(1.1);
-            transform: translate(0px, 2px) rotate(0deg) scale(1.1);
+    -webkit-transform: translate(0px, 2px) rotate(0deg) scale(1.06);
+            transform: translate(0px, 2px) rotate(0deg) scale(1.06);
   }
 
   40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg) scale(1.15);
-            transform: translate(1px, -1px) rotate(1deg) scale(1.15);
+    -webkit-transform: translate(1px, -1px) rotate(1deg) scale(1.07);
+            transform: translate(1px, -1px) rotate(1deg) scale(1.07);
   }
 
   50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg) scale(1.2);
-            transform: translate(-1px, 2px) rotate(-1deg) scale(1.2);
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
+            transform: translate(-1px, 2px) rotate(-1deg) scale(1.1);
   }
 
   60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg) scale(1.25);
-            transform: translate(-3px, 1px) rotate(0deg) scale(1.25);
+    -webkit-transform: translate(-3px, 1px) rotate(0deg) scale(1.12);
+            transform: translate(-3px, 1px) rotate(0deg) scale(1.12);
   }
 
   70% {
-    -webkit-transform: translate(2px, 1px) rotate(-2deg) scale(1.3);
-            transform: translate(2px, 1px) rotate(-2deg) scale(1.3);
+    -webkit-transform: translate(2px, 1px) rotate(-2deg) scale(1.15);
+            transform: translate(2px, 1px) rotate(-2deg) scale(1.15);
   }
 
   80% {
-    -webkit-transform: translate(-1px, -1px) rotate(4deg) scale(1.35);
-            transform: translate(-1px, -1px) rotate(4deg) scale(1.35);
+    -webkit-transform: translate(-1px, -1px) rotate(4deg) scale(1.17);
+            transform: translate(-1px, -1px) rotate(4deg) scale(1.17);
   }
 
   90% {
-    -webkit-transform: translate(2px, 2px) rotate(0deg) scale(1.4);
-            transform: translate(2px, 2px) rotate(0deg) scale(1.4);
+    -webkit-transform: translate(2px, 2px) rotate(0deg) scale(1.2);
+            transform: translate(2px, 2px) rotate(0deg) scale(1.2);
   }
 
   100% {
@@ -2458,6 +2462,10 @@ body {
   background: linear-gradient(51.34deg, #141414 28.46%, #2C3846 95.67%);
   color: #dbe2e4;
   min-height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body.lock {
@@ -3535,6 +3543,10 @@ body.lock {
   margin-top: 32px;
   font-size: 20px;
   line-height: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .qualities__descr {
@@ -4216,8 +4228,8 @@ body.lock {
 }
 
 .music__timer-round.active {
-  -webkit-animation: myOrbit 60s linear infinite;
-          animation: myOrbit 60s linear infinite;
+  -webkit-animation: myOrbit 60s linear;
+          animation: myOrbit 60s linear;
 }
 
 .results {
@@ -4788,6 +4800,23 @@ body.lock {
   line-height: 160%;
   letter-spacing: -0.01em;
   margin: 12px 0;
+}
+
+.results__btn {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: rgba(118,213,39,.6);
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.results__btn:hover {
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background-color: #59b013;
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
