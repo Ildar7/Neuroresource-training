@@ -208,7 +208,7 @@
                     }
                 }
             }
-        } else {
+        } else if (sumUp > 0) {
             for (let i = 10; i >= 0; i--) {
                 let g = 10;
                 if (i == (g - sumUp - 1)) {
@@ -226,6 +226,9 @@
                     }
                 }
             }
+        } else {
+            resultsLineUp[10].classList.add('active');
+            resultsLineUp[10].classList.add('this');
         }
 
         if (sumDown < 0) {
@@ -243,7 +246,7 @@
                     }
                 }
             }
-        } else {
+        } else if (sumDown > 0) {
             for (let i = 10; i >= 0; i--) {
                 let g = 10;
                 if (i == (g - sumDown - 1)) {
@@ -262,6 +265,10 @@
                     }
                 }
             }
+        } else {
+            resultsLineDown[10].classList.add('results__line--down');
+            resultsLineDown[10].classList.add('active');
+            resultsLineDown[10].classList.add('this');
         }
     </script>
 </body>
