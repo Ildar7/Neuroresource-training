@@ -165,21 +165,3 @@ if (JSON.parse(localStorage.getItem('activeStopButton')) == 1) {
         }
     })
 }
-
-
-
-$(document).on('ready', function () {
-    $('#startBtn').on('click', function () {
-        if (JSON.parse(localStorage.getItem('getGender')) == 'male') {
-            let data = { gender: 'male' }
-            $.post('https://hook.eu1.make.com/eak04y6kngyhwxdnt61gix2tektqd802?train_title=Energichnost&sex=m&secret=dsaSDFa321@3!@#123WQSE', data, function (response) {
-                console.log(response);
-            })
-        } else {
-            let data = { gender: 'female' }
-            $.post('https://hook.eu1.make.com/eak04y6kngyhwxdnt61gix2tektqd802?train_title=Energichnost&sex=f&secret=dsaSDFa321@3!@#123WQSE', data, function (response) {
-                console.log(response);
-            })
-        }
-    })
-})

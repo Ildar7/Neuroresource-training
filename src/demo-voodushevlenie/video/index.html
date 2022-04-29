@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" class="full-page-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Нейроресурс | Все качества</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <script src="https://kit.fontawesome.com/7d0ca4e7f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="full-page-body">
+
+    @@include('../../_header.html')
+
+    <div class="wrapper">
+
+        <section class="page-section">
+            <div class="video">
+                <div class="video__container container">
+                    <div class="video__content active">
+                        <div class="video__player">
+                            <div class="video__img">
+                                <video muted playsinline poster="/img/inspiration.png">
+                                    <source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+                                        src="/img/inspiration.mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video__title">Дышите ртом</div>
+                    </div>
+                    <div class="music__content ">
+                        <div class="music__title">Закройте глаза и дождитесь окончания музыки.</div>
+                        <div class="music__block">
+                            <div class="music__audio">
+
+                            </div>
+                            <div class="music__timer">
+                                <div class="music__timer-text">
+                                    <span id="timer">60</span>
+                                    <span id="timerText">секунд</span>
+                                </div>
+                                <span class="music__timer-round"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="video__btn video__btn-start active button">Старт</a>
+                    <a href="/demo-voodushevlenie/condition_vertical_results/"
+                        class="video__btn video__btn-stop button">Стоп</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include('../../_footer.html')
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/js/script.min.js"></script>
+    <script>
+
+        var count = 60;
+        var timerText = document.getElementById('timerText');
+        var counter = () => {
+            setInterval(timer, 1000)
+        };
+
+        function timer() {
+            count = count - 1;
+            if (count == 0) {
+                document.getElementById('timer').innerHTML = count;
+                clearInterval(counter);
+                window.location.href = '/demo-voodushevlenie/condition_vertical_results/';
+                return;
+            }
+            if (count % 10 == 1 && count != 11) {
+                timerText.textContent = 'секунда';
+            } else if ((count % 10 == 3 || count % 10 == 2 || count % 10 == 4) && count != 12 && count != 13 && count != 14) {
+                timerText.textContent = 'секунды';
+            } else if (count % 10 == 5 && count != 15) {
+                timerText.textContent = 'секунд';
+            } else {
+                timerText.textContent = 'секунд';
+            }
+
+            document.getElementById('timer').innerHTML = count;
+            document.querySelector('.music__timer-round').classList.add('active');
+        }
+
+        let musicLink = '/img/audio-inspiration.mp3';
+
+        let videoBlock = document.querySelector('.video__img');
+        if (window.innerWidth <= 991) {
+            let videoBtnStart = document.querySelector('.video__btn-start');
+            videoBtnStart.addEventListener('click', (e) => {
+                e.preventDefault();
+                videoBtnStart.classList.remove('active');
+                let videoElem = document.querySelector('.video__img > video');
+                videoElem.play();
+                var audio = new Audio();
+                audio.src = musicLink;
+                audio.play();
+                let videoContent = document.querySelector('.video__content');
+                let musicContent = document.querySelector('.music__content');
+                videoElem.addEventListener('ended', () => {
+                    videoContent.classList.remove('active');
+                    musicContent.classList.add('active');
+                    counter();
+                });
+            });
+        } else {
+            let videoBtnStart = document.querySelector('.video__btn-start');
+            videoBtnStart.classList.remove('active');
+            var audio = new Audio();
+            audio.src = musicLink;
+            audio.play();
+            let videoElem = document.querySelector('.video__img > video');
+            let videoContent = document.querySelector('.video__content');
+            let musicContent = document.querySelector('.music__content');
+            videoElem.setAttribute('autoplay', 'autoplay')
+            videoElem.addEventListener('ended', () => {
+                videoContent.classList.remove('active');
+                musicContent.classList.add('active');
+                counter();
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Нейроресурс | Состояние</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/7d0ca4e7f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    @@include('../../_header.html')
+
+    <div class="wrapper wrapper-full">
+
+        <section class="page-section flex-section">
+            <div class="condition-vertical condition-vertical-first condition active">
+                <div class="condition__container container">
+                    <div class="condition__content">
+                        <div class="condition__name title-section">Отметьте свое состояние</div>
+                        <p class="condition__descr description block-text">
+                            <span>Оцените по шкале, насколько вы сейчас соответствуете этим
+                                качествам. </span>
+                            <span>Значение -10 - не соответствую совсем, значение +10 - соответствую полностью.</span>
+                            <span>Затем нажмите на кнопку ниже</span>
+                        </p>
+                        <div class="condition-vertical__block">
+                            <div class="condition-vertical__left">
+                                <form class="condition-vertical__form condition-vertical__form-first">
+                                    <div class="condition-vertical__item">
+                                        <div class="condition__tooltip condition-vertical__tooltip"
+                                            id="condition-vertical__tooltip_1">
+
+                                        </div>
+                                        <div class="condition-vertical__arrows">
+                                            <div
+                                                class="condition-vertical__arrow condition-vertical__arrow-up condition-vertical__arrow-up-1">
+                                                <svg class="condition-vertical__answer-icon condition-vertical__answer-icon-up"
+                                                    aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-up"></use>
+                                                </svg>
+                                            </div>
+                                            <div
+                                                class="condition-vertical__arrow condition-vertical__arrow-down condition-vertical__arrow-down-1">
+                                                <svg class="condition-vertical__answer-icon condition-vertical__answer-icon-down"
+                                                    width="15" height="8" aria-hidden="true">
+                                                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="condition__answer">
+                                            <svg class="condition__answer-icon" width="12" height="18"
+                                                aria-hidden="true">
+                                                <use xlink:href="/img/sprite.svg#question-logo"></use>
+                                            </svg>
+
+                                            <div class="condition__answer-block answer-popup ">
+                                                <a href="#popup-text-2"
+                                                    class="condition__answer-link answer-text popup-link orange">Не знаю
+                                                    как определить
+                                                    свое
+                                                    состояние на шкале ></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="start start-index" id="startBtnVoodushevlenie">
+                                        <div class="start__container container">
+                                            <div class="start__content">
+                                                <a href="/demo-voodushevlenie/video/" class="start__link"
+                                                    id="conditionStartLink_2">
+                                                    <span>
+                                                        <span>Начать</span>
+                                                        <span>ILO 05</span>
+                                                    </span>
+                                                </a>
+                                                <a href="/" class="start__back orange">
+                                                    < Вернуться</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    @@include('../../_footer.html')
+
+    <div class="popup" id="popup-text-2">
+        <div class="popup__body">
+            <div class="popup__container container">
+                <div class="popup__content popup__content-text">
+                    <div class="popup__close popup__close-text close-popup">
+                        <svg class="popup__icon" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#cross-logo-dark"></use>
+                        </svg>
+                    </div>
+                    <div class="popup__title block-name">Инструкция по работе с тренажером
+                    </div>
+                    <div class="popup__text block-text">
+                        <p>Вы на странице тренажера – короткой медитации, созданной по специальной технологии. Он
+                            тренирует эмоциональный интеллект, помогая развивать навык раскрытия желаемого состояния.
+                            Для максимального эффекта рекомендуем следовать инструкции.
+                        </p>
+                        <p>Работа с тренажером состоит из трех важных этапов: фиксация состояния до, запуск тренажера и
+                            фиксация состояния после.</p>
+                        <p>Определение состояния перед работой с тренажером запускает синхронизацию вашего интеллекта с
+                            подсознанием, внимание фиксируется на вашей внутренней реальности: на спектре чувств и
+                            ощущений. Именно с ней идет работа тренажера.</p>
+                        <p>1. Определите свое состояние до запуска:</p>
+                        <ul>
+                            <li>Встаньте, зафиксируйте взгляд перед собой</li>
+                            <li>Переведите внимание в область груди</li>
+                            <li>Определите по внутренней интуитивной шкале ваше состояние: где -10 максимальный
+                                негатив или отсутствие качества, или состояния, +10 полный позитив или их максимальное
+                                раскрытие.</li>
+                            <li>Отметьте на шкале состояние. Выставляя значение опирайтесь на чувства удовлетворения и
+                                завершения как показателей точности. Доверяйте себе и не бойтесь ошибиться.</li>
+                        </ul>
+                        <p>2. Запустите тренажер.
+                            На этом этапе от вас требуется держать внимание на видео, дышать ртом и быть в наушниках.
+                            Специальный контент в течение первой минуты начнет раскрывать выбранное вами состояние или
+                            качество. На второй минуте закройте глаза. Состояние или качество продолжит раскрываться.
+                            Оставайтесь с закрытыми глазами в наушниках до момента окончания музыки.
+                        </p>
+                        <p>3. Откройте глаза и отметьте изменения.</p>
+                        <ul>
+                            <li>Встаньте, зафиксируйте взгляд перед собой.</li>
+                            <li>Обратите внимание на то, что изменилось в вашем визуальном восприятии. Постарайтесь
+                                определить и назвать эти изменения. </li>
+                            <li>Обратите внимание на ощущения во всём теле. Сравните их с теми, что были до активации
+                                тренажера</li>
+                            <li>Теперь определите изменения своего состояния в целом и отметьте его на шкале.</li>
+                            <li>Сохраните результат.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="popup__btn popup__btn-text button">Хорошо</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/js/script.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script>
+        let popupBtn = document.querySelector('.popup__btn-text');
+        popupBtn && popupBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('popup-text-2').classList.remove('open');
+            document.querySelector('body').classList.remove('lock');
+        });
+
+
+        $(function () {
+
+            $("#condition-vertical__tooltip_1").slider({
+                orientation: "vertical",
+                range: "min",
+                min: -10,
+                max: 10,
+                value: 0,
+                change: function (event, ui) {
+                    $('.ui-block-answer').css('bottom', $('.ui-slider-handle').css('bottom'));
+                    $('.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min').css('height', '100%');
+                },
+                start: function (event, ui) {
+                    $(".ui-block-link").removeClass("active");
+                },
+                stop: function (event, ui) {
+                    $(".ui-block-link").addClass("active");
+                },
+                slide: function (event, ui) {
+                    $(".ui-value").html(ui.value);
+                }
+            });
+
+            $('.ui-slider-handle').html(`<span class="ui-value"></span>`)
+            $(`<div class="ui-block-answer answer-popup">
+        <span href="#" class="ui-block-link answer-text">
+            Вы уверены в своем выборе?
+            <span class="ui-block-buttons">
+                <span class="ui-block-agree button">Да</span>
+                <span class="ui-block-no button">Нет</span>    
+            </span>
+        </span>
+    </div>`).insertAfter('.condition-vertical__tooltip')
+            $(".ui-value").html($("#condition-vertical__tooltip_1").slider("value"));
+            $(".ui-agree").html($("#condition-vertical__tooltip_1").slider("value"));
+
+            document.querySelector(".condition-vertical__arrow-up").addEventListener("click", () => {
+                $("#condition-vertical__tooltip_1").slider("value", $("#condition-vertical__tooltip_1").slider("value") + 1);
+                $(".ui-value").html($("#condition-vertical__tooltip_1").slider("value"));
+            })
+            document.querySelector(".condition-vertical__arrow-down").addEventListener("click", () => {
+                $("#condition-vertical__tooltip_1").slider("value", $("#condition-vertical__tooltip_1").slider("value") - 1);
+                $(".ui-value").html($("#condition-vertical__tooltip_1").slider("value"));
+            });
+
+            $(".ui-block-agree").on('click', function () {
+                $(".ui-block-link").removeClass("active");
+                $(".start").addClass("active");
+            });
+
+            $(".ui-block-no").on('click', function () {
+                $(".ui-block-link").removeClass("active");
+                $(".start").removeClass("active");
+            });
+            $('.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min').css('height', '100%')
+        });
+
+        $('#startBtnVoodushevlenie').on('click', function () {
+            if (JSON.parse(localStorage.getItem('getGender')) == 'male') {
+                let data = { gender: 'male' }
+                $.post('https://hook.eu1.make.com/eak04y6kngyhwxdnt61gix2tektqd802?train_title=Voodushevleniye&sex=m&secret=dsaSDFa321@3!@123WQSE', data, function (response) {
+                    console.log(response);
+                })
+            } else {
+                let data = { gender: 'female' }
+                $.post('https://hook.eu1.make.com/eak04y6kngyhwxdnt61gix2tektqd802?train_title=Voodushevleniye&sex=f&secret=dsaSDFa321@3!@123WQSE', data, function (response) {
+                    console.log(response);
+                })
+            }
+        })
+
+        window.addEventListener('load', () => {
+            let beforeItem = document.querySelector('.ui-value');
+            beforeItem.addEventListener("DOMSubtreeModified", function () {
+                let beforeItemValue = beforeItem.textContent;
+                if (beforeItemValue != '') {
+                    localStorage.setItem('myKeyBefore', JSON.stringify(beforeItemValue));
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
